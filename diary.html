@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Diary List</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Diary List</h1>
+    </header>
+    <main>
+      <div style='text-align: right;'>
+        <button onclick="goBack()">Go Back</button>
+      </div>
+      <h2>
+        Diaries
+        <div style='text-align: right;'>
+        <button class="delete-selected" onclick="deleteSelectedDiaries()">Delete Selected Diaries</button>
+        </div>
+      </h2>
+      <ul id="diary-list"></ul>
+    </main>
+    <script src="./js/app.js"></script>
+    <script>
+      renderDiaryList();
+    </script>
+  </body>
+</html>
