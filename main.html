@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Todo List & Diary</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Todo List & Diary</h1>
+    </header>
+    <main>
+      <div style='text-align: right;'>
+        <a href="task.html">
+          <button>Task list</button>
+        </a>
+        <a href="diary.html">
+          <button>Diary list</button>
+        </a>
+      </div>
+      <h2>New Task</h2>
+      <form onsubmit="handleTaskSubmit(event)">
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task" required>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" max="9999-12-31" required>
+        <button type="submit">Add Task</button>
+      </form>
+      <h2>New Diary</h2>
+      <form onsubmit="handleDiarySubmit(event)">
+        <label for="mood">Mood:</label>
+        <select id="mood" name="mood">
+          <option value="happy">😊 Happy</option>
+          <option value="sad">😢 Sad</option>
+          <option value="angry">😠 Angry</option>
+          <option value="confused">😕 Confused</option>
+          <option value="excited">😆 Excited</option>
+        </select>
+        <label for="diary">Diary:</label>
+        <textarea id="diary" name="diary" required></textarea>
+        <label for="diary-date">Date:</label>
+        <input type="date" id="diary-date" name="diary-date" max="9999-12-31" required>
+        <button type="submit">Add Diary</button>
+      </form>
+    </main>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
